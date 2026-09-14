@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="field_sale_pdf_form_field_x_is_multiline" model="ir.model.fields">
+        <field name="model_id" ref="sale_pdf_quote_builder.model_sale_pdf_form_field"/>
+        <field name="name">x_is_multiline</field>
+        <field name="field_description">Multiline in PDF</field>
+        <field name="help">Tick this for the form fields that are marked as multiline in the
+            PDF. Those fields get a real multi-line input box in the Quote Builder tab of a
+            sales order instead of a box collapsed to a single row.</field>
+        <field name="ttype">boolean</field>
+        <field name="state">manual</field>
+        <field name="store" eval="True"/>
+    </record>
+
+</odoo>

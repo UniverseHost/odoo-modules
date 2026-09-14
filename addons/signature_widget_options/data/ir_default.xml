@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="default_x_signature_backend_mode_draw" model="ir.default">
+        <field name="field_id" ref="field_res_company_x_signature_backend_mode_draw"/>
+        <field name="json_value">true</field>
+    </record>
+
+    <record id="default_x_signature_backend_mode_auto" model="ir.default">
+        <field name="field_id" ref="field_res_company_x_signature_backend_mode_auto"/>
+        <field name="json_value">true</field>
+    </record>
+
+    <record id="default_x_signature_backend_mode_load" model="ir.default">
+        <field name="field_id" ref="field_res_company_x_signature_backend_mode_load"/>
+        <field name="json_value">true</field>
+    </record>
+
+    <record id="default_x_signature_frontend_mode_draw" model="ir.default">
+        <field name="field_id" ref="field_res_company_x_signature_frontend_mode_draw"/>
+        <field name="json_value">true</field>
+    </record>
+
+    <record id="default_x_signature_frontend_mode_auto" model="ir.default">
+        <field name="field_id" ref="field_res_company_x_signature_frontend_mode_auto"/>
+        <field name="json_value">true</field>
+    </record>
+
+    <record id="default_x_signature_frontend_mode_load" model="ir.default">
+        <field name="field_id" ref="field_res_company_x_signature_frontend_mode_load"/>
+        <field name="json_value">true</field>
+    </record>
+
+</odoo>

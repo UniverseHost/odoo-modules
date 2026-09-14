@@ -1,0 +1,6 @@
+// useAutoresize sets an inline height equal to the content height, which collapses
+// an empty multiline field to a single row. min-height wins over that inline height,
+// so the box starts multi-line and still grows with its content.
+textarea.customFieldCardTextArea.o_pdf_multiline_field {
+    min-height: 6.5em;
+}

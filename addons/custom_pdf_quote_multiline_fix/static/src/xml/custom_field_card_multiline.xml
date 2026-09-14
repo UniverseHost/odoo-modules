@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- Pass the multiline flag reported by get_update_included_pdf_params down to the card. -->
+    <t t-name="custom_pdf_quote_multiline_fix.section"
+       t-inherit="sale_pdf_quote_builder.section"
+       t-inherit-mode="extension">
+        <xpath expr="//CustomFieldCard" position="attributes">
+            <attribute name="multiline">!!formField.multiline</attribute>
+        </xpath>
+    </t>
+
+    <!-- Give the textarea of a multiline form field a real multi-line height. -->
+    <t t-name="custom_pdf_quote_multiline_fix.customFieldCard"
+       t-inherit="sale_pdf_quote_builder.customFieldCard"
+       t-inherit-mode="extension">
+        <xpath expr="//textarea" position="attributes">
+            <attribute name="t-att-class">{ 'o_pdf_multiline_field': props.multiline }</attribute>
+        </xpath>
+    </t>
+
+</templates>

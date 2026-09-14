@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="frontend_layout_signature_config" model="ir.ui.view">
+        <field name="name">web.frontend_layout.inherit.signature.widget.options</field>
+        <field name="type">qweb</field>
+        <field name="key">signature_widget_options.frontend_layout</field>
+        <field name="inherit_id" ref="web.frontend_layout"/>
+        <field name="arch" type="xml">
+            <xpath expr="//head" position="inside">
+                <script type="text/javascript" t-nocache="Depends on the company of the current request.">
+                    odoo.__signature_widget_options__ = <t t-out="json.dumps(request.env.company.read(['x_signature_frontend_mode_draw', 'x_signature_frontend_mode_auto', 'x_signature_frontend_mode_load']))"/>;
+                </script>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="webclient_bootstrap_signature_config" model="ir.ui.view">
+        <field name="name">web.webclient_bootstrap.inherit.signature.widget.options</field>
+        <field name="type">qweb</field>
+        <field name="key">signature_widget_options.webclient_bootstrap</field>
+        <field name="inherit_id" ref="web.webclient_bootstrap"/>
+        <field name="arch" type="xml">
+            <xpath expr="//t[@t-set='head_web']" position="inside">
+                <script type="text/javascript">
+                    odoo.__signature_widget_options__ = <t t-out="json.dumps(request.env.user.company_ids.read(['x_signature_backend_mode_draw', 'x_signature_backend_mode_auto', 'x_signature_backend_mode_load']))"/>;
+                </script>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="field_res_company_x_signature_backend_mode_draw" model="ir.model.fields">
+        <field name="model_id" ref="base.model_res_company"/>
+        <field name="name">x_signature_backend_mode_draw</field>
+        <field name="field_description">Backend signature: Draw</field>
+        <field name="help">Offer the 'Draw' mode (the user draws the signature by hand) in the web client.</field>
+        <field name="ttype">boolean</field>
+        <field name="state">manual</field>
+        <field name="store" eval="True"/>
+    </record>
+
+    <record id="field_res_company_x_signature_backend_mode_auto" model="ir.model.fields">
+        <field name="model_id" ref="base.model_res_company"/>
+        <field name="name">x_signature_backend_mode_auto</field>
+        <field name="field_description">Backend signature: Auto</field>
+        <field name="help">Offer the 'Auto' mode (signature generated from the typed name) in the web client.</field>
+        <field name="ttype">boolean</field>
+        <field name="state">manual</field>
+        <field name="store" eval="True"/>
+    </record>
+
+    <record id="field_res_company_x_signature_backend_mode_load" model="ir.model.fields">
+        <field name="model_id" ref="base.model_res_company"/>
+        <field name="name">x_signature_backend_mode_load</field>
+        <field name="field_description">Backend signature: Load</field>
+        <field name="help">Offer the 'Load' mode (upload an image file) in the web client.</field>
+        <field name="ttype">boolean</field>
+        <field name="state">manual</field>
+        <field name="store" eval="True"/>
+    </record>
+
+    <record id="field_res_company_x_signature_frontend_mode_draw" model="ir.model.fields">
+        <field name="model_id" ref="base.model_res_company"/>
+        <field name="name">x_signature_frontend_mode_draw</field>
+        <field name="field_description">Frontend signature: Draw</field>
+        <field name="help">Offer the 'Draw' mode (the visitor draws the signature by hand) on portal and website pages.</field>
+        <field name="ttype">boolean</field>
+        <field name="state">manual</field>
+        <field name="store" eval="True"/>
+    </record>
+
+    <record id="field_res_company_x_signature_frontend_mode_auto" model="ir.model.fields">
+        <field name="model_id" ref="base.model_res_company"/>
+        <field name="name">x_signature_frontend_mode_auto</field>
+        <field name="field_description">Frontend signature: Auto</field>
+        <field name="help">Offer the 'Auto' mode (signature generated from the typed name) on portal and website pages.</field>
+        <field name="ttype">boolean</field>
+        <field name="state">manual</field>
+        <field name="store" eval="True"/>
+    </record>
+
+    <record id="field_res_company_x_signature_frontend_mode_load" model="ir.model.fields">
+        <field name="model_id" ref="base.model_res_company"/>
+        <field name="name">x_signature_frontend_mode_load</field>
+        <field name="field_description">Frontend signature: Load</field>
+        <field name="help">Offer the 'Load' mode (upload an image file) on portal and website pages.</field>
+        <field name="ttype">boolean</field>
+        <field name="state">manual</field>
+        <field name="store" eval="True"/>
+    </record>
+
+    <record id="field_res_config_settings_x_signature_backend_mode_draw" model="ir.model.fields">
+        <field name="model_id" ref="base.model_res_config_settings"/>
+        <field name="name">x_signature_backend_mode_draw</field>
+        <field name="field_description">Backend signature: Draw</field>
+        <field name="ttype">boolean</field>
+        <field name="state">manual</field>
+        <field name="related">company_id.x_signature_backend_mode_draw</field>
+        <field name="readonly" eval="False"/>
+        <field name="store" eval="False"/>
+    </record>
+
+    <record id="field_res_config_settings_x_signature_backend_mode_auto" model="ir.model.fields">
+        <field name="model_id" ref="base.model_res_config_settings"/>
+        <field name="name">x_signature_backend_mode_auto</field>
+        <field name="field_description">Backend signature: Auto</field>
+        <field name="ttype">boolean</field>
+        <field name="state">manual</field>
+        <field name="related">company_id.x_signature_backend_mode_auto</field>
+        <field name="readonly" eval="False"/>
+        <field name="store" eval="False"/>
+    </record>
+
+    <record id="field_res_config_settings_x_signature_backend_mode_load" model="ir.model.fields">
+        <field name="model_id" ref="base.model_res_config_settings"/>
+        <field name="name">x_signature_backend_mode_load</field>
+        <field name="field_description">Backend signature: Load</field>
+        <field name="ttype">boolean</field>
+        <field name="state">manual</field>
+        <field name="related">company_id.x_signature_backend_mode_load</field>
+        <field name="readonly" eval="False"/>
+        <field name="store" eval="False"/>
+    </record>
+
+    <record id="field_res_config_settings_x_signature_frontend_mode_draw" model="ir.model.fields">
+        <field name="model_id" ref="base.model_res_config_settings"/>
+        <field name="name">x_signature_frontend_mode_draw</field>
+        <field name="field_description">Frontend signature: Draw</field>
+        <field name="ttype">boolean</field>
+        <field name="state">manual</field>
+        <field name="related">company_id.x_signature_frontend_mode_draw</field>
+        <field name="readonly" eval="False"/>
+        <field name="store" eval="False"/>
+    </record>
+
+    <record id="field_res_config_settings_x_signature_frontend_mode_auto" model="ir.model.fields">
+        <field name="model_id" ref="base.model_res_config_settings"/>
+        <field name="name">x_signature_frontend_mode_auto</field>
+        <field name="field_description">Frontend signature: Auto</field>
+        <field name="ttype">boolean</field>
+        <field name="state">manual</field>
+        <field name="related">company_id.x_signature_frontend_mode_auto</field>
+        <field name="readonly" eval="False"/>
+        <field name="store" eval="False"/>
+    </record>
+
+    <record id="field_res_config_settings_x_signature_frontend_mode_load" model="ir.model.fields">
+        <field name="model_id" ref="base.model_res_config_settings"/>
+        <field name="name">x_signature_frontend_mode_load</field>
+        <field name="field_description">Frontend signature: Load</field>
+        <field name="ttype">boolean</field>
+        <field name="state">manual</field>
+        <field name="related">company_id.x_signature_frontend_mode_load</field>
+        <field name="readonly" eval="False"/>
+        <field name="store" eval="False"/>
+    </record>
+
+    <function model="res.company" name="write">
+        <value model="res.company" search="[]"/>
+        <value eval="{
+            'x_signature_backend_mode_draw': True,
+            'x_signature_backend_mode_auto': True,
+            'x_signature_backend_mode_load': True,
+            'x_signature_frontend_mode_draw': True,
+            'x_signature_frontend_mode_auto': True,
+            'x_signature_frontend_mode_load': True,
+        }"/>
+    </function>
+
+</odoo>

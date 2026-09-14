@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="sale_pdf_form_field_list" model="ir.ui.view">
+        <field name="name">sale.pdf.form.field.list.multiline</field>
+        <field name="model">sale.pdf.form.field</field>
+        <field name="inherit_id" ref="sale_pdf_quote_builder.sale_pdf_form_field_list"/>
+        <field name="arch" type="xml">
+            <field name="document_type" position="after">
+                <field name="is_multiline" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>
